@@ -54,8 +54,10 @@ class Grr < Formula
   end
 
   def install
-    # The release tarballs store the binary under its target name
-    # (macos-aarch64, linux-x86_64, linux-aarch64), so map it to \`grr\` here.
+    # Releases up to v0.8.0 store the binary under its target name
+    # (macos-aarch64, linux-x86_64, linux-aarch64); v0.8.1+ ships it as
+    # \`grr\`. Accept both, so the formula is correct whichever release the
+    # updater last saw.
     target = if OS.mac?
       "macos-aarch64"
     elsif Hardware::CPU.arm?
@@ -63,7 +65,8 @@ class Grr < Formula
     else
       "linux-x86_64"
     end
-    bin.install target => "grr"
+    source = File.exist?(target) ? target : "grr"
+    bin.install source => "grr"
   end
 
   test do
