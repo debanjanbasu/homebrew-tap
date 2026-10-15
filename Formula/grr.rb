@@ -1,24 +1,24 @@
 class Grr < Formula
   desc "Google tools from the terminal, at maximum performance (Gmail, Calendar, Drive, Contacts, Chat, Forms)"
   homepage "https://grr-cli.pages.dev"
-  version "1.0.1"
+  version "2.0.0"
   license "MIT"
 
   on_macos do
     depends_on arch: :arm64
 
-    url "https://github.com/debanjanbasu/grr-cli/releases/download/v1.0.1/grr-v1.0.1-macos-aarch64.tar.zst"
-    sha256 "0db0f8a3c65b1f98fe14673ca5750870e97242330d9cfac68b09104c967ed6f8"
+    url "https://github.com/debanjanbasu/grr-cli/releases/download/v2.0.0/grr-v2.0.0-macos-aarch64.tar.zst"
+    sha256 "d1db8ff7ea30263e6cbd877dc9a80c540de2616e2b4c2c7cb713b26269f84696"
   end
 
   on_linux do
     on_arch :arm do
-      url "https://github.com/debanjanbasu/grr-cli/releases/download/v1.0.1/grr-v1.0.1-linux-aarch64.tar.zst"
-      sha256 "5898cb558d59583e519ad34398f9d586a89b7509ae3d88d7df9069edbd4e0a91"
+      url "https://github.com/debanjanbasu/grr-cli/releases/download/v2.0.0/grr-v2.0.0-linux-aarch64.tar.zst"
+      sha256 "ab97a61dc6942e3a714ffad37f7eddc8fcbb6f4a2d05317db25f19c38ceba0a6"
     end
     on_arch :x86_64 do
-      url "https://github.com/debanjanbasu/grr-cli/releases/download/v1.0.1/grr-v1.0.1-linux-x86_64.tar.zst"
-      sha256 "905fe0193e9465a31697815ce3d8cb5336e283c1d2f789c6ad51deb778128596"
+      url "https://github.com/debanjanbasu/grr-cli/releases/download/v2.0.0/grr-v2.0.0-linux-x86_64.tar.zst"
+      sha256 "7c936abf62589fcbb9841b84c5a4dd1eddcf917a7467c15e779326ed05a5e6b3"
     end
   end
 
